@@ -14,14 +14,19 @@ function generatePassword () {
     prompt("Choose a number between 8 and 128 for the length of your password.");
     }
     
-    var specialCharacter = parseInt(prompt('Would you like your password to contain special characters?  e.g !@#($)%^&*    Type:  "Yes" or "No"'));
-    
-    var number = parseInt(prompt('Would you like your password to contain a number?  e.g 0123456789    Type "Yes" or "No"')); 
-    
-    var lowerCase = parseInt(prompt('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz    Type:  "Yes" or "No"'));
-    
-    var upperCase = parseInt(prompt('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ    Type:  "Yes" or "No"'));
-  }
+  var specialCharacter = parseInt(window.confirm('Would you like your password to contain special characters?  e.g !@#($)%^&*'));
+    if (specialCharacter = true){
+      
+    }
+
+  var number = parseInt(window.confirm('Would you like your password to contain a number?  e.g 0123456789')); 
+  
+  var lowerCase = parseInt(window.confirm('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz'));
+  
+  var upperCase = parseInt(window.confirm('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ'));
+
+  var newPassword =  
+}
 
 
 // Assignment Code
