@@ -8,16 +8,11 @@ var passwordLength = 8 || 128
 function generatePassword () {
   
   var passwordLength = parseInt(prompt('Choose a number between 8 and 128 for your password length'));
-    isNaN(passwordLength)
-    if (passwordLength < 8 || passwordLength > 128){
-    alert('Oh no! You chose a number less than 8 or greater than 128')
-    prompt("Choose a number between 8 and 128 for the length of your password.");
-    do {
+    while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)){
       alert('Oh no! You chose a number less than 8 or greater than 128')
-      passwordLength = parseInt(prompt('Choose a number between 8 and 128 for your password length'));
+      passwordLength = prompt("Choose a number between 8 and 128 for the length of your password.");
     }
-    while (passwordLength <= 8 || passwordLength >= 128)
-    }
+    
     
   var specialCharacter = parseInt(window.confirm('Would you like your password to contain special characters?  e.g !@#($)%^&*'));
     if (specialCharacter == true){
