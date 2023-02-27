@@ -6,23 +6,24 @@ var passwordLength = 8 || 128
 
 
 function generatePassword () {
-  // 
-  prompt("Choose a number between 8 and 128 for the length of your password.");
-    var length = parseInt(prompt('How many characters would you like your password to contain?'));
-    // If user input is less than 8 or greater than 128 send a prompt message to let them know.
-    if (passwordLength < 8 || passwordLength > 128)
+  
+  var passwordLength = parseInt(prompt('Choose a number between 8 and 128 for your password length'));
     isNaN(passwordLength)
+    if (passwordLength < 8 || passwordLength > 128){
     alert('Oh no! You chose a number less than 8 or greater than 128')
     prompt("Choose a number between 8 and 128 for the length of your password.");
+    }
+    
+    var specialCharacter = parseInt(prompt('Would you like your password to contain special characters?  e.g !@#($)%^&*    Type:  "Yes" or "No"'));
+    
+    var number = parseInt(prompt('Would you like your password to contain a number?  e.g 0123456789    Type "Yes" or "No"')); 
+    
+    var lowerCase = parseInt(prompt('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz    Type:  "Yes" or "No"'));
+    
+    var upperCase = parseInt(prompt('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ    Type:  "Yes" or "No"'));
+  }
 
-  prompt('Would you like your password to contain special characters?  e.g' + '       ' + specialCharacter);
-  
-  prompt('Would you like your password to contain a number?  e.g' + '       ' + number); 
 
-  prompt('Would you like your password to contain lower case letters?  e.g ' + '       ' + lowerCase);
-  
-  prompt('Would you like your password to contain upper case letters?  e.g ' + '       ' + upperCase);
-}
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
