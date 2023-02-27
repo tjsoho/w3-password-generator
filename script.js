@@ -14,9 +14,9 @@ function generatePassword () {
     prompt("Choose a number between 8 and 128 for the length of your password.");
     do {
       alert('Oh no! You chose a number less than 8 or greater than 128')
-      prompt("Choose a number between 8 and 128 for the length of your password.");
+      passwordLength = parseInt(prompt('Choose a number between 8 and 128 for your password length'));
     }
-    while (passwordLength < 8 || passwordLength > 128)
+    while (passwordLength <= 8 || passwordLength >= 128)
     }
     
   var specialCharacter = parseInt(window.confirm('Would you like your password to contain special characters?  e.g !@#($)%^&*'));
