@@ -13,23 +13,22 @@ function generatePassword () {
       passwordLength = prompt("Choose a number between 8 and 128 for the length of your password.");
     }
     
-    
   var specialCharacter = parseInt(window.confirm('Would you like your password to contain special characters?  e.g !@#($)%^&*'));
     if (specialCharacter == true){
       available = available.concat(specialCharacter)
     }
     
-    var number = parseInt(window.confirm('Would you like your password to contain a number?  e.g 0123456789')); 
+  var number = parseInt(window.confirm('Would you like your password to contain a number?  e.g 0123456789')); 
     if (number == true){
       available = available.concat(number)
     }
-    
-    var lowerCase = parseInt(window.confirm('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz'));
+  
+  var lowerCase = parseInt(window.confirm('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz'));
     if (lowerCase == true){
       available = available.concat(lowerCase)
     }
-    
-    var upperCase = parseInt(window.confirm('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ'));
+  
+  var upperCase = parseInt(window.confirm('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ'));
     if (upperCase == true){
       available = available.concat(upperCase)
     }
