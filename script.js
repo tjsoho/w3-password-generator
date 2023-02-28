@@ -15,23 +15,26 @@ function generatePassword () {
     
   var specialCharacterResponse = window.confirm('Would you like your password to contain special characters?  e.g !@#($)%^&*');
     if (specialCharacterResponse == true){
-      console.log('special worked')
+      console.log(specialCharacterResponse)
       available = available.concat(specialCharacterArray)
     }
     
-  var number = window.confirm('Would you like your password to contain a number?  e.g 0123456789'); 
-    if (number == true){
-      available = available.concat(number)
+  var numberResponse = window.confirm('Would you like your password to contain a number?  e.g 0123456789'); 
+    if (numberResponse == true){
+      console.log(numberResponse)
+      available = available.concat(numberArray)
     }
   
-  var lowerCase = window.confirm('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz');
-    if (lowerCase == true){
-      available = available.concat(lowerCase)
+  var lowerCaseResponse = window.confirm('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz');
+    if (lowerCaseResponse == true){
+      console.log(lowerCaseResponse)
+      available = available.concat(lowerCaseArray)
     }
   
-  var upperCase = window.confirm('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ');
-    if (upperCase == true){
-      available = available.concat(upperCase)
+  var upperCaseResponse = window.confirm('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ');
+    if (upperCaseResponse == true){
+      console.log(upperCaseResponse)
+      available = available.concat(upperCaseArray)
     }
     
 }
