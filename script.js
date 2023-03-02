@@ -62,6 +62,7 @@ function generatePassword () {
       upperCaseResponse == false
     ){
       alert('Whoops! Please make sure you choose at least 1 of the criteria options')
+      generatePassword()
     }
       
     
