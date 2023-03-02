@@ -8,7 +8,6 @@ function writePassword() {
 
   // The below code is what outputs the random password
   passwordText.value = password;
-  
 }
 
 // Add event listener to generate button
@@ -21,37 +20,35 @@ var specialCharacterArray = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '
 var passwordLengthArray = 8 || 128
 
 function generatePassword () {
+// Var available will be where all the 'confirmed' criterias are stored to be used to generate the password
   var available = []  
   var passwordLength = parseInt(prompt('Choose a number between 8 and 128 for your password length'));
     while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)){
       alert('Oh no! You chose a number less than 8 or greater than 128')
       passwordLength = prompt("Choose a number between 8 and 128 for the length of your password.");
     }
-    
+// Folloing Vars are to include special characters, numbers, lower and upper case letters
   var specialCharacterResponse = window.confirm('Would you like your password to contain special characters?  e.g !@#($)%^&*');
     if (specialCharacterResponse == true){
-      console.log(specialCharacterResponse)
       available = available.concat(specialCharacterArray)
     }
     
   var numberResponse = window.confirm('Would you like your password to contain a number?  e.g 0123456789'); 
     if (numberResponse == true){
-      console.log(numberResponse)
       available = available.concat(numberArray)
     }
   
   var lowerCaseResponse = window.confirm('Would you like your password to contain lower case letters?  e.g abcdefghijklmnopqrstuvwxyz');
     if (lowerCaseResponse == true){
-      console.log(lowerCaseResponse)
       available = available.concat(lowerCaseArray)
     }
   
   var upperCaseResponse = window.confirm('Would you like your password to contain upper case letters?  e.g BCDEFGHIJKLMNOPQRSTUVWXYZ');
     if (upperCaseResponse == true){
-      console.log(upperCaseResponse)
       available = available.concat(upperCaseArray)
     }
 
+//If all responses are flase the loop below prompt the user to choose at least one
   if (
       specialCharacterResponse == false
       &&
@@ -65,14 +62,16 @@ function generatePassword () {
       generatePassword()
     }
       
-    
+// Variable for the length of password chosen by the user    
  var userLength = passwordLength
-    
+   
+// Loop for generating the password itself however many times the user indicated.
  let userPassword = "";
  for (var i = 0; i < passwordLength; i++) {
    let random = Math.floor(Math.random() * available.length);
    userPassword += available[random];
  }
 
+// This returns the password after it's been generated so the user can see it
   return userPassword;
 }
