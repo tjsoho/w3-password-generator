@@ -1,0 +1,42 @@
+# Project Title
+
+Week 3 Assignment: Random Password Generator
+
+## Description
+The purpose of this READme is to provide a detailed description of this site.
+
+The site allows users to generate a random password. The user can choose anywhere between 8 and 128 characts to form the password. The user can also choose to include at least 1 or as many variables that include upper and lowercase letters, numbers and special characters.
+
+After making the selection the user will be presented with their random password.
+
+The site can be accessed via this link:
+https://tjsoho.github.io/w3-password-generator/
+
+### This repository contains:
+* A READme file detailing the assignment and the site
+* Html.index file
+* Script.JS
+* Assets folder that contains the following:
+* Png file of the site
+* Css folder containing css style sheet
+* Original ReadMe
+
+The site had some starter code and I have gone through and added the function to generate the password.
+
+I have also notated within the code to break down the various sections and to also use as a reference point for myself when developing further APIs.
+
+Below is a screenshot of what the site looks like.
+
+![Alt text](assets/Screen%20Shot%202023-03-02%20at%202.21.10%20pm.png)
+
+## Authors
+
+Toby Carroll
+
+
+## Version History
+    
+* See commit changes
+
+
+
